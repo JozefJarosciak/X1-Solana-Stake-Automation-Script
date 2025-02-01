@@ -57,10 +57,10 @@ Edit the script `/home/stake_automation.sh` to set your parameters:
   The public address of your vote account.
 
 - **PRIMARY_STAKE_ACCOUNT:**  
-  The path to your primary stake account keypair file (e.g., `/home/.config/solana/100kstake.json`).
+  The path to your primary stake account keypair file (e.g., `/home/.config/solana/main-stake-account.json`).
 
 - **EXTRA_STAKE_ACCOUNT:**  
-  The path to the extra stake account keypair file (e.g., `/home/.config/solana/extra_stake.json`).
+  The path to the extra stake account keypair file (e.g., `/home/.config/solana/temp_stake_account.json`).
 
 - **WITHDRAWER_KEYPAIR:**  
   Path to your withdraw authority keypair (e.g., `/home/.config/solana/withdrawer.json`).
