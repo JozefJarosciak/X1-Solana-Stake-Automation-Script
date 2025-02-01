@@ -1,4 +1,4 @@
-# Solana Stake Automation Script
+# X1/Solana Stake Automation Script
 
 This script automates excess SOL staking on Solana by withdrawing funds from a vote account, creating & delegating a new stake account, and merging it into an existing stake account upon activation.
 You can run this script on schedule to manage and optimize your staking. It performs the following steps:
