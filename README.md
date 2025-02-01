@@ -1,6 +1,9 @@
+![WARNING](https://img.shields.io/badge/IMPORTANT-WARNING-red)
+<strong>Please read and fully understand this script before use; by running this code you assume all risks and the creator is not responsible for any damages or losses.</strong>
+
 # X1/Solana Stake Automation Script
 
-This script automates excess SOL staking on Solana by withdrawing funds from a vote account, creating & delegating a new stake account, and merging it into an existing stake account upon activation.
+This script automates excess SOL staking on X1 or Solana by withdrawing funds from your vote account, creating & delegating it to a temporary stake account, and upon stake activation, merging it into your  existing 'main' stake account.
 You can run this script on schedule to manage and optimize your staking. It performs the following steps:
 
 1. **Withdraw Excess SOL:**  
@@ -20,6 +23,7 @@ The script logs all actions to a log file and also outputs the process to the te
 ## Screenshot
 
 ![image](https://github.com/user-attachments/assets/c2560cdd-0532-4411-9b29-d7db0cbd1cc5)
+
 
 ---
 
