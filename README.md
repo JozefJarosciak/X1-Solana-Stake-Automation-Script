@@ -42,31 +42,31 @@ The script logs all actions to a log file and also outputs the process to the te
 ### Keypair Files:
 The following keypair files are required (adjust paths as necessary):
 - Vote account address (configured in the script)
-- Primary stake account keypair (e.g., /root/.config/solana/100kstake.json)
-- Identity keypair (e.g., /root/.config/solana/identity.json)
-- Withdraw authority keypair (e.g., /root/.config/solana/withdrawer.json)
-- Extra stake account keypair (e.g., /root/.config/solana/extra_stake.json)  
+- Primary stake account keypair (e.g., /home/.config/solana/main-stake-account.json)
+- Identity keypair (e.g., /home/.config/solana/identity.json)
+- Withdraw authority keypair (e.g., /home/.config/solana/withdrawer.json)
+- Extra stake account keypair (e.g., /home/.config/solana/temp_stake_account.json)  
   - The script will generate this file if it does not exist.
 
 ---
 
 ## Configuration
-Edit the script `/root/stake_automation.sh` to set your parameters:
+Edit the script `/home/stake_automation.sh` to set your parameters:
 
 - **VOTE_ACCOUNT:**  
   The public address of your vote account.
 
 - **PRIMARY_STAKE_ACCOUNT:**  
-  The path to your primary stake account keypair file (e.g., `/root/.config/solana/100kstake.json`).
+  The path to your primary stake account keypair file (e.g., `/home/.config/solana/100kstake.json`).
 
 - **EXTRA_STAKE_ACCOUNT:**  
-  The path to the extra stake account keypair file (e.g., `/root/.config/solana/extra_stake.json`).
+  The path to the extra stake account keypair file (e.g., `/home/.config/solana/extra_stake.json`).
 
 - **WITHDRAWER_KEYPAIR:**  
-  Path to your withdraw authority keypair (e.g., `/root/.config/solana/withdrawer.json`).
+  Path to your withdraw authority keypair (e.g., `/home/.config/solana/withdrawer.json`).
 
 - **IDENTITY_KEYPAIR:**  
-  Path to your identity keypair (e.g., `/root/.config/solana/identity.json`).
+  Path to your identity keypair (e.g., `/home/.config/solana/identity.json`).
 
 - **MIN_VOTE_BALANCE:**  
   The minimum SOL to keep in the vote account (default is 50 SOL).
@@ -81,7 +81,7 @@ Edit the script `/root/stake_automation.sh` to set your parameters:
 ### Manual Execution
 Run the script manually:
 ```bash
-/root/stake_automation.sh
+/home/stake_automation.sh
 ```
 
 ### Cron Job
@@ -91,7 +91,7 @@ crontab -e
 ```
 Add the following line:
 ```cron
-0 * * * * /root/stake_automation.sh
+0 * * * * /home/stake_automation.sh
 ```
 
 ---
