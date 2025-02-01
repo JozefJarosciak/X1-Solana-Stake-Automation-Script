@@ -3,10 +3,10 @@
 # ------------------------------------------------------------------------------
 # Script Name: stake_automation.sh
 # Description: Withdraws any excess SOL (over 50 SOL) from the vote account,
-#              creates a stake account (extra_stake.json) with the withdrawn funds,
+#              creates a stake account (temp_stake_account.json) with the withdrawn funds,
 #              delegates that stake to the vote account, then every 30 seconds
 #              checks if the stake is active. When active, it merges it into the
-#              primary stake account (100kstake.json) and completes the job.
+#              primary stake account (main-stake-account.json) and completes the job.
 # Schedule: Set as a cron job to run hourly (or run continuously).
 # ------------------------------------------------------------------------------
 
@@ -15,17 +15,17 @@
 # Your Vote Account Address
 VOTE_ACCOUNT=""
 
-# Primary Stake Account Keypair Path (to merge into)
-PRIMARY_STAKE_ACCOUNT="/root/.config/solana/100kstake.json"
+# Primary Stake Account Keypair Path (create this stake account if you don't have it already to merge into)
+PRIMARY_STAKE_ACCOUNT="/home/.config/solana/main-stake-account.json"
 
-# Extra Stake Account Keypair Path (for new stake deposits)
-EXTRA_STAKE_ACCOUNT="/root/.config/solana/extra_stake.json"
+# Temporary Stake Account Keypair Path (for new stake deposits)
+EXTRA_STAKE_ACCOUNT="/home/.config/solana/temp_stake_account.json"
 
 # Withdraw Authority Keypair Path
-WITHDRAWER_KEYPAIR="/root/.config/solana/withdrawer.json"
+WITHDRAWER_KEYPAIR="/home/.config/solana/withdrawer.json"
 
 # Identity Keypair Path (System Account)
-IDENTITY_KEYPAIR="/root/.config/solana/identity.json"
+IDENTITY_KEYPAIR="/home/.config/solana/identity.json"
 
 # Minimum vote account balance to keep (SOL)
 MIN_VOTE_BALANCE=50
