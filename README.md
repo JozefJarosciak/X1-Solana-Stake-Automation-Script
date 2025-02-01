@@ -1,7 +1,7 @@
 # Solana Stake Automation Script
 
 This script automates excess SOL staking on Solana by withdrawing funds from a vote account, creating & delegating a new stake account, and merging it into an existing stake account upon activation.
-It performs the following steps:
+You can run this script on schedule to manage and optimize your staking. It performs the following steps:
 
 1. **Withdraw Excess SOL:**  
    Withdraws any SOL above a configured minimum (default: 50 SOL) from a specified vote account.
@@ -16,6 +16,10 @@ It performs the following steps:
    Once active, automatically merges the extra stake into a primary stake account.
 
 The script logs all actions to a log file and also outputs the process to the terminal.
+
+## Screenshot
+
+![image](https://github.com/user-attachments/assets/c2560cdd-0532-4411-9b29-d7db0cbd1cc5)
 
 ---
 
@@ -75,11 +79,6 @@ Run the script manually:
 ```bash
 /root/stake_automation.sh
 ```
-
-## Screenshot
-
-![image](https://github.com/user-attachments/assets/c2560cdd-0532-4411-9b29-d7db0cbd1cc5)
-
 
 ### Cron Job
 To run the script automatically (e.g., hourly), add a cron job. Edit your crontab:
